@@ -1,6 +1,13 @@
 # BuildOptimizerBug
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9 (and updated to 7.2.1).
+
+## Reproducing the issue
+
+Run `yarn` to install dependencies, then run `yarn build` to build the production build with `buildOptimizer` enabled.
+Serve the resulting artifacts in `dist/build-optimizer-bug` with a regular http-server and open the application in the browser. You can see, that it errors out without displaying anything.
+
+Then, turn off `buildOptimizer` in `angular.json` and run `yarn build` again. Open the resulting artifacts in the browser again and see, that everything works as expected.
 
 ## Development server
 
