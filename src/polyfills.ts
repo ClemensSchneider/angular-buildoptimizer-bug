@@ -78,3 +78,12 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+// required polyfill as Angular > 6 removed a shim that provided `window.global` and `window.process`
+(window as any).global = window;
+(window as any).process = {
+  env: { DEBUG: undefined },
+  browser: true,
+  version: '',
+  versions: {}
+};
+(window as any).Buffer = global.Buffer || require('buffer').Buffer;
