@@ -4,9 +4,9 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
-const autobahn = require('autobahn');
+const when = require('when');
 
-console.log(autobahn);
+console.log(when);
 
 if (environment.production) {
   enableProdMode();
